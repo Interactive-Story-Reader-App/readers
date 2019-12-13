@@ -21,10 +21,10 @@ public class ReaderController {
     }
 
     @CrossOrigin
-    @GetMapping("/api/v1/readers/")
-    public List<Reader> getReaders() throws IOException{
-        List<Reader> allreaders = db.getAllDocsRequestBuilder().includeDocs(true).build().getResponse().getDocsAs(Reader.class);
-        return allreaders;
+    @GetMapping("/api/v1/readers")
+    public List<Reader> getChapters() throws IOException {
+        List<Reader> allReaders = db.getAllDocsRequestBuilder().includeDocs(true).build().getResponse().getDocsAs(Reader.class);
+        return allReaders;
     }
 
     @CrossOrigin
